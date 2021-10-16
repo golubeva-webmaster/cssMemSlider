@@ -65,3 +65,54 @@ input[name="r"]{
   width:100%;
   height: 100%;
 }
+/*---------- Двигаем цитаты -----------{*/
+.citates{
+  width: 70%;
+  display: flex;
+  transition: all .5s ease;
+}
+.citate{
+  color: #fff;
+  font-size: 1.2rem;
+  font-family: 'sans-serif';
+  width: 25%;
+  transition: all .5s ease;
+  opacity: 0;
+  padding-top: .4rem;
+}
+#r1:checked ~ .slider .slides .s1,
+#r1:checked ~ .slider .slider-bottom .citates .l1{
+  margin-left: 0%;
+}
+#r2:checked ~ .slider .slides .s1,
+#r2:checked ~ .slider .slider-bottom .citates .l1{
+  margin-left: -25%;
+}
+#r3:checked ~ .slider .slides .s1,
+#r3:checked ~ .slider .slider-bottom .citates .l1{
+  margin-left: -50%;
+}
+#r4:checked ~ .slider .slides .s1,
+#r4:checked ~ .slider .slider-bottom .citates .l1{
+  margin-left: -75%;
+}
+
+#r1:checked ~ .slider .slider-bottom .citates .l1,
+#r2:checked ~ .slider .slider-bottom .citates .l2,
+#r3:checked ~ .slider .slider-bottom .citates .l3,
+#r4:checked ~ .slider .slider-bottom .citates .l4{
+  opacity: 1;
+}
+
+/*---------- Подкрашиваем активный label ---------*/
+
+#r1:checked ~ .slider .slider-bottom .navigation .b1,
+#r2:checked ~ .slider .slider-bottom .navigation .b2,
+#r3:checked ~ .slider .slider-bottom .navigation .b3,
+#r4:checked ~ .slider .slider-bottom .navigation .b4{
+  background-color: #000;
+  border: .3rem solid blue;
+  cursor: unset;
+  margin-top: .7rem;
+}
+
