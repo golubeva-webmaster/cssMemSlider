@@ -65,6 +65,8 @@ input[name="r"]{
   width:100%;
   height: 100%;
 }
+
+
 /*---------- Двигаем цитаты -----------{*/
 .citates{
   width: 70%;
@@ -116,3 +118,44 @@ input[name="r"]{
   margin-top: .7rem;
 }
 
+
+@media screen and (max-width: 1100px) {
+  .citate {
+    font-size: .9rem;
+  }
+  .bar{
+    border: .5rem solid #000;
+    width:.8rem;
+    height:.8rem;
+  }
+  #r1:checked ~ .slider .slider-bottom .navigation .b1, 
+  #r2:checked ~ .slider .slider-bottom .navigation .b2, 
+  #r3:checked ~ .slider .slider-bottom .navigation .b3, 
+  #r4:checked ~ .slider .slider-bottom .navigation .b4 {
+    margin-top: .2rem;  
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .citates {
+    width: 100%;
+  }
+  .citate {
+    font-size: .7rem;
+  }
+  .slider-bottom {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .bar{
+    border: .3rem solid #000;
+  }
+  #r1:checked ~ .slider .slider-bottom .navigation .b1, 
+  #r2:checked ~ .slider .slider-bottom .navigation .b2, 
+  #r3:checked ~ .slider .slider-bottom .navigation .b3, 
+  #r4:checked ~ .slider .slider-bottom .navigation .b4 {
+    width:.5rem;
+    height:.5rem;
+    margin-top: .1rem;
+  }
+}
